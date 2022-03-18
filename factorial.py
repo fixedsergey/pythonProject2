@@ -1,6 +1,8 @@
 import time
+import psutil
 
 
+print("Программа выводит расчетное время факторизации числа. Частота процессора ", psutil.cpu_freq().current, " Гц")
 def factor(n):
     ans = []
     d = 2
@@ -14,8 +16,6 @@ def factor(n):
         ans.append(n)
     return ans
 
-
-# f = int(input("Введите число: "))
 for j in range(11):
     f = 10 ** (j*2+1) + 1
     start = time.time()
