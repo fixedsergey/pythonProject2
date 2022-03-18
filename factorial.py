@@ -20,8 +20,9 @@ for j in range(11):
     f = 10 ** (j*2+1) + 1
     start = time.time()
     fact = factor(f)
+    size = len(fact)
     solve_time = time.time() - start
-    print(f"{j+1}. Множители числа {f:30} это {fact}")
+    print(f"{j+1}. Множители числа {f:30} в количестве {size} штук это {fact}")
     print(f"Расчетное время: {solve_time}")
     start = time.time()
     mul = 1
